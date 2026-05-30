@@ -1,0 +1,24 @@
+{
+  "name": "desafio-final-disciplina",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leonardodms111/desafio-final-disciplina.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/leonardodms111/desafio-final-disciplina/issues"
+  },
+  "homepage": "https://github.com/leonardodms111/desafio-final-disciplina#readme",
+  "dependencies": {
+    "mocha": "^11.7.6"
+  }
+}
