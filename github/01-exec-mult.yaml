@@ -1,0 +1,58 @@
+name: CI - Testes Automatizados
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+
+  workflow_dispatch:
+
+  schedule:
+    - cron: '0 8 * * 1-5' # Segunda a sexta às 08:00 UTC
+
+defaults:
+  run:
+    shell: cmd
+
+jobs:
+  e2e-tests:
+
+    runs-on:
+      - self-hosted
+      - windows
+      - x64
+
+    steps:
+
+      - name: Checkout do código
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24.x
+
+      - name: Instalar Yarn
+        run: npm install -g yarn
+
+      - name: Instalar dependências
+        run: yarn
+
+      - name: Instalar browsers do Playwright
+        run: npx playwright install
+
+      - name: Executar testes E2E
+        run: npx playwright test
+
+      - name: Gerar relatório HTML
+        if: always()
+        run: npx playwright show-report --host 0.0.0.0
+
+      - name: Publicar relatório
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: playwright-report/
+          retention-days: 30
