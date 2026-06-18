@@ -1,0 +1,12 @@
+﻿{
+  "repositoryName": "leonardodms111/pos-intContinua-multiplasExecs",
+  "pipelineDirectory": "pos-intContinua-multiplasExecs",
+  "workspaceDirectory": "pos-intContinua-multiplasExecs\\pos-intContinua-multiplasExecs",
+  "repositories": {
+    "leonardodms111/pos-intContinua-multiplasExecs": {
+      "repositoryPath": "pos-intContinua-multiplasExecs\\pos-intContinua-multiplasExecs",
+      "lastRunOn": "06/17/2026 22:06:53 -03:00"
+    }
+  },
+  "lastRunOn": "06/17/2026 22:08:28 -03:00"
+}
