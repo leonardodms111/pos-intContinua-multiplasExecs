@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha",
+    "pretest": "node -e \"require('fs').mkdirSync('./test-results',{recursive:true})\"",
+    "test": "mocha --reporter mocha-junit-reporter --reporter-options mochaFile=./test-results/results.xml",
     "playwright:test": "playwright test --config=playwright.config.cjs"
   },
   "repository": {
@@ -21,5 +22,8 @@
   "homepage": "https://github.com/leonardodms111/desafio-final-disciplina#readme",
   "dependencies": {
     "mocha": "^11.7.6"
+  },
+  "devDependencies": {
+    "mocha-junit-reporter": "^2.1.0"
   }
 }
