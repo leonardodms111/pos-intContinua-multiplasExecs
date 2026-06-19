@@ -1,0 +1,144 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-06-19T13:15:15.985Z",
+    "end": "2026-06-19T13:15:15.988Z",
+    "duration": 3,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "94f4e2e1-c2e2-4b2e-b11a-89768d15e360",
+      "title": "",
+      "fullFile": "C:\\Users\\leona\\Documents\\POS\\Projetos\\desafio-final-disciplina\\test\\pagamentoeConsulta.test.js",
+      "file": "\\test\\pagamentoeConsulta.test.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "cf3d7d1f-1b9d-45de-86f6-1e63b0cdc730",
+          "title": "ServicoDePagamento",
+          "fullFile": "C:\\Users\\leona\\Documents\\POS\\Projetos\\desafio-final-disciplina\\test\\pagamentoeConsulta.test.js",
+          "file": "\\test\\pagamentoeConsulta.test.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Registra pagamento categoria cara",
+              "fullTitle": "ServicoDePagamento Registra pagamento categoria cara",
+              "timedOut": false,
+              "duration": 0,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const servico = new ServicoDePagamento();\nservico.pagar('1562-3784-9384', 'jujubasVerdes', 150);\nconst pagamento = servico.consultarUltimoPagamento();\nassert.strictEqual(pagamento.categoria, 'cara');",
+              "err": {},
+              "uuid": "33033e5b-27cf-4c8d-83f4-2c7c7f4f1e6c",
+              "parentUUID": "cf3d7d1f-1b9d-45de-86f6-1e63b0cdc730",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Registra pagamento categoria padrão",
+              "fullTitle": "ServicoDePagamento Registra pagamento categoria padrão",
+              "timedOut": false,
+              "duration": 0,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const servico = new ServicoDePagamento();\nservico.pagar('1562-3784-9384', 'jujubasVerdes', 50);\nconst pagamento = servico.consultarUltimoPagamento();\nassert.strictEqual(pagamento.categoria, 'padrão');",
+              "err": {},
+              "uuid": "5516265d-33eb-4e01-bd01-17f05cbd8554",
+              "parentUUID": "cf3d7d1f-1b9d-45de-86f6-1e63b0cdc730",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Retorna só o último pagamento",
+              "fullTitle": "ServicoDePagamento Retorna só o último pagamento",
+              "timedOut": false,
+              "duration": 0,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const servico = new ServicoDePagamento();\nservico.pagar('111', 'Empresa A', 50);\nservico.pagar('222', 'Empresa B', 200);\nconst pagamento = servico.consultarUltimoPagamento();\nassert.strictEqual(pagamento.codigoBarras, '222');",
+              "err": {},
+              "uuid": "fd64306f-8645-48eb-8b84-a2574939b6b9",
+              "parentUUID": "cf3d7d1f-1b9d-45de-86f6-1e63b0cdc730",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "33033e5b-27cf-4c8d-83f4-2c7c7f4f1e6c",
+            "5516265d-33eb-4e01-bd01-17f05cbd8554",
+            "fd64306f-8645-48eb-8b84-a2574939b6b9"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "11.7.6"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "test-results",
+        "reportFilename": "report",
+        "quiet": "true",
+        "overwrite": "true",
+        "inline": "true"
+      },
+      "version": "6.3.2"
+    }
+  }
+}
