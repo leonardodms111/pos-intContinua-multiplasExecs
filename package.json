@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "pretest": "node -e \"require('fs').mkdirSync('./test-results',{recursive:true})\"",
-    "test": "mocha \"test/**/*.spec.js\" --reporter mochawesome --reporter-options reportDir=test-results,reportFilename=report,quiet=true,overwrite=true",
+    "test": "mocha \"test/**/*.spec.js\" \"test/**/*.test.js\" --reporter mochawesome --reporter-options reportDir=test-results,reportFilename=report,quiet=true,overwrite=true",
     "playwright:test": "playwright test --config=playwright.config.cjs"
   },
   "repository": {
