@@ -18,10 +18,7 @@ defaults:
 jobs:
   e2e-tests:
 
-    runs-on:
-      - self-hosted
-      - windows
-      - x64
+    runs-on: windows-latest
 
     steps:
 
