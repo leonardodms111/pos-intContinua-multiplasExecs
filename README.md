@@ -16,7 +16,7 @@ O objetivo desse projeto é trabalhar algumas possibilidades de execução da pi
 O arquivo de workflow está localizado em:
 
 ```text
-.github/workflows/ci.yml
+.github/workflows/01-exec-mult.yml
 ```
 
 A pipeline é executada automaticamente em três cenários:
@@ -172,13 +172,10 @@ garante que os artefatos sejam publicados mesmo quando ocorrer falha na execuç�
 
 ## Fluxo Resumido
 
-1. Desenvolvedor realiza alteração no código.
+1. Realizamos as alterações nos códigos.
 2. O push para `main` ou `develop` dispara a pipeline.
 3. O GitHub Actions prepara o ambiente.
 4. As dependências são instaladas.
 5. Os testes automatizados são executados.
 6. Os relatórios são armazenados como artefatos.
-7. A equipe consulta os resultados da execução.
-
-```
-```
+7. Consultamos os resultados da execução.
